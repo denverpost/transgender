@@ -660,6 +660,20 @@ a:hover, * a:hover, a:hover * {
 .centervideo {
     margin:4em 0 6em;
 }
+#overviewvid, #slidesoffset {
+    clear:both;
+    margin-bottom:10%;
+}
+#overviewvid .row, #slidesoffset {
+    padding-top:10em;
+    padding-bottom:10em;
+}
+#overviewvid .vid-embed-play {
+    border:3px solid rgba(0,0,0,0.8);
+}
+#overviewvid .vid-embed-play .playtext:after, #overviewvid .vid-embed-play .playicon:after {
+    color:rgba(0,0,0,0.8);
+}
 a.startVideo {
     border-bottom:1px solid #444;
     text-decoration: none;

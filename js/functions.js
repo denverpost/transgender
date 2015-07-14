@@ -9,6 +9,7 @@ var adsloaded = [];
 /* THIS IS CONFIG DATA SPECIFIC TO SITE */
 var showAds = true; //show slide-up leaderboards at bottom
 var slideAds = 3; //number of times to slide up a leaderboard
+var vidBack = true;
 var titleFade = true; //whether to fade the Denver Post logo in the top-bar to show the "DP" and a text title
 //var pages = ['#titlepage','#part1','#photos','#part2']; //div/section IDs that should trigger a page view and title change
 var pages = [];
@@ -261,6 +262,21 @@ function checkAdPos() {
     }
 }
 
+function darkBackground(element, reverse) {
+    if (!(/(iPad|iPhone|iPod)/g.test(navigator.userAgent))) {
+        if (!reverse) {
+            $(element).animate({backgroundColor:'#222'}, 750);
+            $(element + ' p.caption').animate({color:'rgba(255,255,255,0.6)'}, 750);
+            $(element + ' .lowertitle h1').animate({color:'rgba(255,255,255,0.6)'}, 750);
+            $('.fixed').animate({top:'-45px'},350);
+        } else {
+            $(element).animate({backgroundColor:'#fff'}, 750);
+            $(element + ' p.caption').animate({color:'rgba(0,0,0,0.6)'}, 750);
+            $('.fixed').animate({top:'0'},750);
+        }
+    }
+}
+
 function checkPageState(pages) {
     for (key in pages) {
         if ($(window).scrollTop() < 100) {
@@ -278,6 +294,13 @@ function checkPageState(pages) {
                 $(triggerDiv).removeClass('omnitrig');
             }
         }
+    }
+    if ( isVisible('#overviewvid') && vidBack ) {
+        darkBackground('#overviewvid',false);
+        vidBack = false;
+    } else if ( !isVisible('#overviewvid') && !vidBack ) {
+        darkBackground('#overviewvid',true);
+        vidBack = true;
     }
 }
 
