@@ -1,0 +1,22 @@
+/* TEAM */
+	Title: Daniel J. Schneider, Developer
+	Site: http://www.denverpost.com, http://www.scrollwright.com
+	Email: dschneider@denverpost.com
+	Twitter: @schneidan
+	Location: Denver, Colorado, USA
+
+	Title: Kevin Hamm, Data Developer
+	Site: http://www.denverpost.com
+	Email: khamm@denverpost.com
+	Twitter: @kevinmhamm
+	Location: Denver, Colorado, USA
+
+/* SITE */
+	Standards: HTML5, CSS3
+	Components: Modernizr, jQuery, slickjs, Google Fonts, ZURB Foundation, TopBar, Reveal, chartjs, 
+	Software: Sublime Text 3, git, Google Chrome, Mozilla Firefox, Web Developer for Firefox, Adobe Photoshop
+	Last update: 2014/11/20
+
+/* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
+/* zurb.com */
+/* humanstxt.org */
