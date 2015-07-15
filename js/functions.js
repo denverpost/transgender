@@ -265,14 +265,14 @@ function checkAdPos() {
 function darkBackground(element, reverse) {
     if (!(/(iPad|iPhone|iPod)/g.test(navigator.userAgent))) {
         if (!reverse) {
-            $(element).animate({backgroundColor:'#222'}, 750);
-            $(element + ' p.caption').animate({color:'rgba(255,255,255,0.6)'}, 750);
-            $(element + ' .lowertitle h1').animate({color:'rgba(255,255,255,0.6)'}, 750);
-            $('.fixed').animate({top:'-45px'},350);
+            $(element).animate({backgroundColor:'#222'}, 500);
+            $(element + ' p.caption').animate({color:'rgba(255,255,255,0.6)'}, 500);
+            $(element + ' .lowertitle h1').animate({color:'rgba(255,255,255,0.6)'}, 500);
+            $('.fixed').animate({top:'-45px'},200);
         } else {
-            $(element).animate({backgroundColor:'#fff'}, 750);
-            $(element + ' p.caption').animate({color:'rgba(0,0,0,0.6)'}, 750);
-            $('.fixed').animate({top:'0'},750);
+            $(element).animate({backgroundColor:'#fff'}, 500);
+            $(element + ' p.caption').animate({color:'rgba(0,0,0,0.6)'}, 500);
+            $('.fixed').animate({top:'0'},500);
         }
     }
 }
