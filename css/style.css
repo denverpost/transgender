@@ -161,12 +161,22 @@ p.blurb {
 p.byline {
     text-align:center;
     font-size:1em;
-    margin-bottom:2em;
+    margin-bottom:2.5em;
 }
 p.bylinebottom {
     text-align:center;
     font-size:.9em;
     margin-bottom:1em;
+}
+p.published {
+    text-transform:uppercase;
+    font-family:'PT Sans', Helvetica, Arial, sans-serif !important;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:.85em;
+    margin:2.5em 0;
+    text-align:center;
+    color:rgba(34,34,34,0.8);
 }
 #logoimg {
     margin:0;
@@ -632,7 +642,7 @@ p.credit {
   font-size:.65em;
   letter-spacing:2px;
   font-style:normal;
-  color:#000;
+  color:rgba(34,34,34,1.0);
   display:block;
   width:100%;
   text-align:right;
@@ -707,12 +717,6 @@ p.credit {
 #overviewvid .row, #slidesoffset {
     padding-top:3em;
     padding-bottom:3em;
-}
-#overviewvid .vid-embed-play {
-    border:3px solid rgba(0,0,0,0.8);
-}
-#overviewvid .vid-embed-play .playtext:after, #overviewvid .vid-embed-play .playicon:after {
-    color:rgba(0,0,0,0.8);
 }
 a.startVideo {
     border-bottom:1px solid #444;
