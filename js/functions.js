@@ -15,6 +15,7 @@ var titleFade = true; //whether to fade the Denver Post logo in the top-bar to s
 var pages = [];
 $('.omnitrig').each(function(i,e) { pages.push('#'+$(e).attr('id')) });
 var galleries = [];
+var currentPlayer = false;
 $('.centergallery').each(function(i,e) { galleries.push('#'+$(e).attr('id')) }); //div/section IDs of galleries to instantiate (must be a div like #photos and have a child, the gallery itself, with the same ID plus 'gallery' -- i.e. #photosgallery)
 
 function revealSocial(type,link,title,image,desc,twvia,twrel) {
@@ -69,8 +70,8 @@ function revealSlides(galleries) {
                 centerMode: true,
                 centerPadding: '15%',
                 slidesToShow: 1,
-                prevArrow: '<button type="button" class="slick-prev"><span>&lt;</span></button>',
-                nextArrow: '<button type="button" class="slick-next"><span>&gt;</span></button>',
+                prevArrow: '<button type="button" class="slick-prev"></button>',
+                nextArrow: '<button type="button" class="slick-next"></button>',
                 responsive: [{
                     breakpoint: 800,
                     settings: {
@@ -116,12 +117,30 @@ function toggleSidebar(toShow,toHide) {
     scrollDownTo(toShow);
 }
 
-function playerCreator(embedId, playerId, divId) {
+function playerCreator(embedId, playerId, divId, doDarkBack) {
+    doDarkBack = typeof doDarkBack !== 'undefined' ? doDarkBack : false;
     divId = typeof divId !== 'undefined' ? divId : false;
     if (divId) {
         $(divId).animate({backgroundColor:'rgba(0,70,70,0.3)',paddingLeft:'.5em',paddingRight:'.5em'}, 350).delay(2000).animate({backgroundColor:'transparent',paddingLeft:'0',paddingRight:'0'},1000);
     }
-    OO.Player.create(embedId, playerId, {'autoplay':true});
+    if (embedId == 'video1') {
+        darkBackground('#overviewvid',false);
+        vidBack = false;
+    }
+    OO.Player.create(embedId, playerId, {
+        'autoplay':true,
+        onCreate: function(player) {
+            currentPlayer = player;
+        }
+    });
+}
+
+function checkPlayerState() {
+    if ( ( currentPlayer.elementId != 'video1' || (currentPlayer.getState !== 'played' || currentPlayer.getState !== 'playing' ) ) && isVisible('#overviewvid') ) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 function playerScroller(embedId, playerId, divId) {
@@ -269,10 +288,18 @@ function darkBackground(element, reverse) {
             $(element + ' p.caption').animate({color:'rgba(255,255,255,0.6)'}, 500);
             $(element + ' .lowertitle h1').animate({color:'rgba(255,255,255,0.6)'}, 500);
             $('.fixed').animate({top:'-45px'},200);
+            $(element).find('.columns').removeClass('large-9');
+            $(element).find('.columns').removeClass('medium-10');
+            $(element).find('.columns').addClass('large-12');
+            $(element).find('.columns').addClass('medium-12');
         } else {
             $(element).animate({backgroundColor:'#fff'}, 500);
             $(element + ' p.caption').animate({color:'rgba(0,0,0,0.6)'}, 500);
             $('.fixed').animate({top:'0'},500);
+            $(element).find('.columns').removeClass('large-12');
+            $(element).find('.columns').removeClass('medium-12');
+            $(element).find('.columns').addClass('large-9');
+            $(element).find('.columns').addClass('medium-10');
         }
     }
 }
@@ -295,10 +322,7 @@ function checkPageState(pages) {
             }
         }
     }
-    if ( isVisible('#overviewvid') && vidBack ) {
-        darkBackground('#overviewvid',false);
-        vidBack = false;
-    } else if ( !isVisible('#overviewvid') && !vidBack ) {
+    if ( checkPlayerState() && !vidBack ) {
         darkBackground('#overviewvid',true);
         vidBack = true;
     }

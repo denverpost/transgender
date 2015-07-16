@@ -59,13 +59,7 @@ body {
     margin-bottom:1em;
 }
 #part1intro {
-    background-image:url('http://placehold.it/1800x1301&text=Big+Leader+Photo');
-}
-#part2intro {
-    background-image:url('../img/opener-part2.jpg');
-}
-#part3intro {
-    background-image:url('../img/opener-part3.jpg');
+    background-image:url('../img/transgender-elsa-20089a.jpg');
 }
 .opener div#title {
     position: absolute;
@@ -83,7 +77,7 @@ body {
     font-size:12.5em;
     text-align:center;
     width:100%;
-    line-height:.55;
+    line-height:.545;
     color:#f9f9f9;
     font-weight: 700;
     letter-spacing:-2px;
@@ -145,6 +139,15 @@ p.lead {
     line-height:2;
     font-weight:700;
 }
+p.lead:first-letter {
+    float:left;
+    font-size:6em;
+    font-weight:700;
+    line-height:.75;
+    color:rgba(34,34,34,0.75);
+    margin-right:.15em;
+    margin-bottom:.25em;
+}
 p.blurb {
     font-family:'Noticia Text', Georgia, Times, 'Times New Roman', serif;
     font-size:1.35em;
@@ -158,7 +161,7 @@ p.blurb {
 p.byline {
     text-align:center;
     font-size:1em;
-    margin-bottom:5em;
+    margin-bottom:2em;
 }
 p.bylinebottom {
     text-align:center;
@@ -431,11 +434,11 @@ div.title h2 {
     z-index:-1;
 }
 div.title h1 {
-    margin:8% 0 35%;
+    margin:1em 0;
     text-align: center;
     font-family:'PT Sans Narrow', Helvetica, Arial, sans-serif !important;
-    font-size:2.65em;
-    font-weight:400;
+    font-size:4em;
+    font-weight:600;
     line-height:1;
     text-transform:uppercase;
     color:rgba(34,34,34,1);
@@ -584,11 +587,26 @@ a:hover, * a:hover, a:hover * {
     padding:0;
     margin:2em 0 4em;
 }
+p.credit {
+    text-transform:uppercase;
+    font-family:'Maven Pro', Helvetica, Arial, sans-serif !important;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:.65em;
+    letter-spacing:2px;
+    font-style:normal;
+    color:rgba(0,0,0,0.85);
+    width:100%;
+    text-align:right;
+    margin:0 0 2em;
+    position:relative;
+    top:-10px;
+}
 .caption {
   	font-size:.95em;
     line-height:1.5;
     color:rgba(0,0,0,0.6);
-    padding:.75em 0 0;
+    padding:.25em 1em 1em;
     margin:0;
     font-family:'PT Sans', Helvetica, Arial, sans-serif;
     font-weight:400;
@@ -605,6 +623,20 @@ a:hover, * a:hover, a:hover * {
 .caption span.capwarning {
     color:rgba(0,0,0,0.5);
     font-weight:700;
+}
+.caption span.photog {
+  text-transform:uppercase;
+  font-family:'PT Sans', Helvetica, Arial, sans-serif !important;
+  font-weight:400;
+  text-transform:uppercase;
+  font-size:.65em;
+  letter-spacing:2px;
+  font-style:normal;
+  color:#000;
+  display:block;
+  width:100%;
+  text-align:right;
+  padding-bottom:.5em;
 }
 .centergallery {
     width:100%;
@@ -637,23 +669,31 @@ a:hover, * a:hover, a:hover * {
     outline:none;
 }
 .centergallery button.slick-next {
-    position:absolute;
+    position:absolute;    
+    background:rgba(255,255,255,1.0);
+    background-image:url('../img/nextButton.svg');
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    background-size:30%;
     top:0;
     right:0;
     height:100%;
     width:15%;
     text-align:left;
-    background:rgba(255,255,255,1.0);
     outline:none;
 }
 .centergallery button.slick-prev {
     position:absolute;
+    background:rgba(255,255,255,1.0);
+    background-image:url('../img/previousButton.svg');
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    background-size:30%;
     top:0;
     left:0;
     height:100%;
     width:15%;
     text-align:right;
-    background:rgba(255,255,255,1.0);
     outline:none;
 }
 /* video */
@@ -662,11 +702,11 @@ a:hover, * a:hover, a:hover * {
 }
 #overviewvid, #slidesoffset {
     clear:both;
-    margin-bottom:10%;
+    margin-bottom:1em;
 }
 #overviewvid .row, #slidesoffset {
-    padding-top:10em;
-    padding-bottom:10em;
+    padding-top:3em;
+    padding-bottom:3em;
 }
 #overviewvid .vid-embed-play {
     border:3px solid rgba(0,0,0,0.8);
@@ -938,6 +978,10 @@ div#footer-bar ul.social li {
     }
     section.inset p {
         line-height: 1.7;
+    }
+    .caption span.photog, p.credit {
+        font-size:.75em;
+        letter-spacing:1px;
     }
 }
 @media (max-width:740px) {
