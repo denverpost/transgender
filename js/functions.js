@@ -18,6 +18,36 @@ var galleries = [];
 var currentPlayer = false;
 $('.centergallery').each(function(i,e) { galleries.push('#'+$(e).attr('id')) }); //div/section IDs of galleries to instantiate (must be a div like #photos and have a child, the gallery itself, with the same ID plus 'gallery' -- i.e. #photosgallery)
 
+var QueryString = function () {
+  // This function is anonymous, is executed immediately and 
+  // the return value is assigned to QueryString!
+  var query_string = {};
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+        // If first entry with this name
+    if (typeof query_string[pair[0]] === "undefined") {
+      query_string[pair[0]] = decodeURIComponent(pair[1]);
+        // If second entry with this name
+    } else if (typeof query_string[pair[0]] === "string") {
+      var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+      query_string[pair[0]] = arr;
+        // If third or later entry with this name
+    } else {
+      query_string[pair[0]].push(decodeURIComponent(pair[1]));
+    }
+  } 
+    return query_string;
+}();
+
+function formSuccessMessage() {
+    if (QueryString.source == 'form') {
+        $('#email p.blurbsmallform').html('');
+        $('#email div.email-form').html('<div data-alert class="alert-box success radius">Thanks for signing up!</div>');
+    }
+}
+
 function revealSocial(type,link,title,image,desc,twvia,twrel) {
     title = typeof title !== 'undefined' ? title : false;
     image = typeof image !== 'undefined' ? image : false;
@@ -333,6 +363,7 @@ $('.chart-late').find('img').unveil(300);
 $(document).ready(function() {
     checkHash();
     checkAdPos();
+    formSuccessMessage();
 });
 
 var didScroll = false;
