@@ -152,7 +152,7 @@ p.blurb {
     font-family:'Noticia Text', Georgia, Times, 'Times New Roman', serif;
     font-size:1.35em;
     line-height:1.9;
-    color:rgba(0,0,0,0.5);
+    color:rgba(0,0,0,0.6);
     font-style: italic;
     text-align: center;
     margin:1em auto 5em;
@@ -177,6 +177,13 @@ p.published {
     margin:2.5em 0;
     text-align:center;
     color:rgba(34,34,34,0.8);
+}
+p.smallsans {
+    font-size:1.05em;
+    line-height:1.7;
+    margin-bottom:1.4em;
+    font-weight:300;
+    font-family:'PT Sans', Helvetica, Arial, sans-serif !important;
 }
 #logoimg {
     margin:0;
@@ -717,6 +724,9 @@ p.credit {
 #overviewvid .row, #slidesoffset {
     padding-top:3em;
     padding-bottom:3em;
+}
+#overviewvid .caption {
+    font-size:1.15em;
 }
 a.startVideo {
     border-bottom:1px solid #444;
