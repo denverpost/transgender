@@ -45,6 +45,7 @@ function formSuccessMessage() {
     if (QueryString.source == 'form') {
         $('#email p.blurbsmallform').html('');
         $('#email div.email-form').html('<div data-alert class="alert-box success radius">Thanks for signing up!</div>');
+        history.replaceState({}, '', pathRoot);
     }
 }
 
@@ -352,7 +353,7 @@ function checkPageState(pages) {
             }
         }
     }
-    if ( checkPlayerState() && !vidBack ) {
+    if ( $('#overviewvid').length && checkPlayerState() && !vidBack ) {
         darkBackground('#overviewvid',true);
         vidBack = true;
     }
