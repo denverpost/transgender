@@ -288,8 +288,8 @@ function darkBackground(element, reverse) {
             $(element + ' p.caption').animate({color:'rgba(255,255,255,0.6)'}, 500);
             $(element + ' .lowertitle h1').animate({color:'rgba(255,255,255,0.6)'}, 500);
             $('.fixed').animate({top:'-45px'},200);
-            $(element).find('.columns').removeClass('large-9');
-            $(element).find('.columns').removeClass('medium-10');
+            $(element).find('.columns').removeClass('large-10');
+            $(element).find('.columns').removeClass('medium-11');
             $(element).find('.columns').addClass('large-12');
             $(element).find('.columns').addClass('medium-12');
         } else {
@@ -298,8 +298,8 @@ function darkBackground(element, reverse) {
             $('.fixed').animate({top:'0'},500);
             $(element).find('.columns').removeClass('large-12');
             $(element).find('.columns').removeClass('medium-12');
-            $(element).find('.columns').addClass('large-9');
-            $(element).find('.columns').addClass('medium-10');
+            $(element).find('.columns').addClass('large-10');
+            $(element).find('.columns').addClass('medium-11');
         }
     }
 }
