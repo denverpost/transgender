@@ -125,6 +125,8 @@ div#name2 h1 {
     line-height:1.7;
     font-weight:400;
     color:#555;
+    display:inline-block;
+    float:left;
 }
 .lowertitle h3 {
     width: 100%;
@@ -1035,6 +1037,16 @@ div#footer-bar ul.social li {
     }
 }
 @media (max-width:800px) {
+    div#name2 {
+        left:1em;
+    }
+    div#name2 h1 {
+        font-size:1em;
+        line-height:1.8;
+    }
+    #logosmall {
+        margin-right:1em;
+    }
     .centergallery .caption {
         font-size:.8em;
     }
