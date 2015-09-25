@@ -159,6 +159,7 @@ function playerCreator(embedId, playerId, divId, doDarkBack) {
     }
     if (embedId == 'video1') {
         darkBackground('#overviewvid',false);
+        scrollDownTo('#overviewvid');
         vidBack = false;
     }
     OO.Player.create(embedId, playerId, {
@@ -321,7 +322,6 @@ function darkBackground(element, reverse) {
             $(element).animate({backgroundColor:'#222'}, 500);
             $(element + ' p.caption').animate({color:'rgba(255,255,255,0.6)'}, 500);
             $(element + ' .lowertitle h1').animate({color:'rgba(255,255,255,0.6)'}, 500);
-            $('.fixed').animate({top:'-45px'},200);
             $(element).find('.columns').removeClass('large-10');
             $(element).find('.columns').removeClass('medium-11');
             $(element).find('.columns').addClass('large-12');
@@ -329,7 +329,6 @@ function darkBackground(element, reverse) {
         } else {
             $(element).animate({backgroundColor:'#fff'}, 500);
             $(element + ' p.caption').animate({color:'rgba(0,0,0,0.6)'}, 500);
-            $('.fixed').animate({top:'0'},500);
             $(element).find('.columns').removeClass('large-12');
             $(element).find('.columns').removeClass('medium-12');
             $(element).find('.columns').addClass('large-10');
