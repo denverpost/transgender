@@ -64,6 +64,9 @@ body {
 #part2intro {
     background-image:url('../img/transgender-alison-opener.jpg');
 }
+#part3intro {
+    background-image:url('../img/transgender-soldier-opener.jpg');
+}
 .opener div#title {
     position: absolute;
     z-index: -1;
@@ -935,6 +938,94 @@ div#footer-bar ul.social li {
     padding:0 .5em;
     float:left;
     display:inline-block;
+}
+/* --------------------- Closer Banner --------------------- */
+.closer {
+    height:65%;
+    width: 100%;
+    overflow: hidden;
+    background:#000;
+    position: relative;
+    padding: 0;
+    margin-top:2em;
+    margin-bottom:0;
+    background-color:#000;
+}
+.teaser {
+    width:100%;
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: absolute;
+}
+#teaserphoto1{
+    background-image:url('../img/transgender-alison-opener.jpg');
+    width:50%;
+}
+#teaserphoto2{
+    background-image:url('../img/transgender-elsa-opener.jpg');
+    width:50%;
+}
+#teaserphoto3{
+    background-image:url('../img/inning-four-rotola-001.jpg');
+    width:50%;
+}
+.closer div#next-teaser {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    opacity:0.75;
+    transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -webkit-transition: opacity .15s ease-in-out;
+}
+.closer div#next-teaser h2 {
+    position: absolute;
+    margin-left:50%;
+    width:50%;
+    padding:1em 20% 40px 40px;
+    height:100%;
+    top:0;
+    background:#000;
+    background-image:url(../img/nextButton2.svg);
+    background-repeat:no-repeat;
+    background-position:90% 50%;
+    background-size:20%;
+    font-family:'Noticia Text', Georgia, Times, 'Times New Roman', serif !important;
+    font-weight:900;
+    font-size:3em;
+    text-align:left;
+    line-height:1;
+    color:#fff;
+    letter-spacing:2px;
+}
+.closer div#next-teaser h2 span {
+    display: block;
+    font-family:'PT Sans', Helvetica, Arial, sans-serif !important;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:75%;
+    margin-bottom:12px;
+    line-height:1;
+    color:#008686;
+    letter-spacing:1px;
+}
+.closer div#next-teaser img{
+    height:20px;
+    padding-bottom:2px;
+}
+.closer div#next-teaser:hover{
+    opacity:1.0;
+}
+.closer div#next-teaser h2 a:hover{
+    color:#ffb368
 }
 @media (max-width:1550px) {
     .opener div#title h2 {
