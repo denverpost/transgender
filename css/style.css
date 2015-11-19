@@ -67,6 +67,9 @@ body {
 #part3intro {
     background-image:url('../img/transgender-soldier-opener.jpg');
 }
+#part4intro {
+    background-image:url('../img/transgender-shannon-opener.jpg');
+}
 .opener div#title {
     position: absolute;
     z-index: -1;
