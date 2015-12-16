@@ -70,6 +70,9 @@ body {
 #part4intro {
     background-image:url('../img/transgender-shannon-opener.jpg');
 }
+#part5intro {
+    background-image:url('../img/transgender-health-opener.jpg');
+}
 .opener div#title {
     position: absolute;
     z-index: -1;
