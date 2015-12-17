@@ -372,7 +372,8 @@ section.inset.right.chart p {
 }
 section.inset.left.chart p.caption,
 section.inset.right.chart p.caption {
-    padding:0 0 1em;
+    padding:0.25em 0 1em;
+    font-size:1.1em;
     font-style:italic;
     line-height:1.45;
     font-family:'Noticia Text', Georgia, Times, 'Times New Roman', serif;
