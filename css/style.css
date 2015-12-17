@@ -355,9 +355,37 @@ section.inset .inset-video-left {
 section.inset.left.chart,
 section.inset.right.chart {
     background:#fff;
-    font-size:.85em;
+    font-size:.8em;
     line-height:1.2;
     padding:0 1.5em 1em;
+}
+section.inset.left.chart h3,
+section.inset.right.chart h3 {
+    font-size:1.6em;
+}
+section.inset.left.chart p,
+section.inset.right.chart p {
+    line-height:1.5;
+    font-size:1.15em;
+    font-family:'Noticia Text', Georgia, Times, 'Times New Roman', serif;
+    color:rgba(0,0,0,0.7);
+}
+section.inset.left.chart p.caption,
+section.inset.right.chart p.caption {
+    padding:0 0 1em;
+    font-style:italic;
+    line-height:1.45;
+    font-family:'Noticia Text', Georgia, Times, 'Times New Roman', serif;
+}
+section.inset.left.chart p.caption span.photog,
+section.inset.right.chart p.caption span.photog {
+    font-size:100%;
+    color:rgba(0,0,0,0.7);
+    letter-spacing: 0;
+    font-style: italic;
+    font-family:'Noticia Text', Georgia, Times, 'Times New Roman', serif!important;
+    text-transform: none;
+    padding:.35em 0 0;
 }
 section.inset.left.chart h3.subheading,
 section.inset.right.chart h3.subheading {
