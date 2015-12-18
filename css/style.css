@@ -73,6 +73,9 @@ body {
 #part5intro {
     background-image:url('../img/transgender-health-opener.jpg');
 }
+#part5intro {
+    background-image:url('../img/transgender-words-opener.jpg');
+}
 .opener div#title {
     position: absolute;
     z-index: -1;
