@@ -76,6 +76,9 @@ body {
 #part6intro {
     background-image:url('../img/transgender-words-opener.jpg');
 }
+#part7intro {
+    background-image:url('../img/transgender-homeless-opener.jpg');
+}
 .opener div#title {
     position: absolute;
     z-index: -1;
