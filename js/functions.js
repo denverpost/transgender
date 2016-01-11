@@ -162,20 +162,22 @@ function playerCreator(embedId, playerId, divId, doDarkBack) {
         scrollDownTo('#overviewvid');
         vidBack = false;
     }
+    $('#' + embedId).html('<iframe src="http://launch.newsinc.com/?type=VideoPlayer/Single&widgetId=1&trackingGroup=69016&siteSection=denverpost_spl_fea_sty&videoId=' + playerId + '" class="informvideo" noscroll style="width:100%; height:100%;" frameborder="no" scrolling="no" noresize></iframe>');
+    /*
     OO.Player.create(embedId, playerId, {
         'autoplay':true,
         onCreate: function(player) {
             currentPlayer = player;
         }
     });
+    */
 }
 
 function checkPlayerState() {
     if ( ( currentPlayer.elementId != 'video1' || (currentPlayer.getState !== 'played' || currentPlayer.getState !== 'playing' ) ) && isVisible('#overviewvid') ) {
         return false;
-    } else {
-        return true;
     }
+    return true;
 }
 
 function playerScroller(embedId, playerId, divId) {
