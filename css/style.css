@@ -912,6 +912,9 @@ a.startVideo:hover {
     background-position:center center;
     display:block;
 }
+.vid-embed video {
+    width:100%;
+}
 .vid-embed .innerWrapper {
     height:100%;
 }
