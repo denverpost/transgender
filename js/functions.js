@@ -18,6 +18,7 @@ var titleFade = true; //whether to fade the Denver Post logo in the top-bar to s
 var pages = [];
 $('.omnitrig').each(function(i,e) { pages.push('#'+$(e).attr('id')) });
 var galleries = [];
+var playedVideos = [];
 var currentPlayer = false;
 $('.centergallery').each(function(i,e) { galleries.push('#'+$(e).attr('id')) }); //div/section IDs of galleries to instantiate (must be a div like #photos and have a child, the gallery itself, with the same ID plus 'gallery' -- i.e. #photosgallery)
 
@@ -162,10 +163,13 @@ function playerCreator(embedId, playerId, divId, doDarkBack) {
         scrollDownTo('#overviewvid');
         vidBack = false;
     }
-    $('#' + embedId).html('<video id="'+embedId+'player" preload controls autoplay> \n\
-        <source src="./video/'+playerId+'.mp4" /> \n\
-        <source src="./video/'+playerId+'.webm" /> \n\
-    </video>');
+    if (playedVideos.indexOf(playerId) != 0) {
+        playedVideos.push(playerId);
+        $('#' + embedId).html('<video id="'+embedId+'player" preload controls autoplay> \n\
+            <source src="./video/'+playerId+'.mp4" /> \n\
+            <source src="./video/'+playerId+'.webm" /> \n\
+        </video>');
+    }
 }
 
 function checkPlayerState() {
