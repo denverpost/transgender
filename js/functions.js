@@ -169,6 +169,7 @@ function playerCreator(embedId, playerId, divId, doDarkBack) {
             <source src="./video/'+playerId+'.mp4" /> \n\
             <source src="./video/'+playerId+'.webm" /> \n\
         </video>');
+        $('#' + embedId).css('cursor','default');
     }
 }
 
